@@ -69,7 +69,7 @@ python main.py --exp_name <exp name> --task <segment | classify | reconstruct> -
 ```
 Use `--seg_no_label` if you want to run segmentation task without category label.
 
-You can download our already trained models from [[Dropbox]](https://www.dropbox.com/sh/54pv3iki2lwytes/AAAvHVDtS7sTFj3zbnf9ta-Ja?dl=0) or [[BaiduDisk]](https://pan.baidu.com/s/1UigbY4jNts8LMZ6fqJXvxQ) and place them under `snapshot/`.
+You can download our already trained models from [[TsinghuaCloud]](https://cloud.tsinghua.edu.cn/d/d9e7a899582d432cbc11/) or [[BaiduDisk]](https://pan.baidu.com/s/1UigbY4jNts8LMZ6fqJXvxQ) and place them under `snapshot/`.
 
 Because this work is done before our PyTorch reimplementation for DGCNN, the training setting in this repo is slightly different with [AnTao97/dgcnn.pytorch](https://github.com/AnTao97/dgcnn.pytorch). You can set `self.epochs = 200` and `random_translate=False` in line 61 and 120 in `segmentation.py` to follow the settings in [AnTao97/dgcnn.pytorch](https://github.com/AnTao97/dgcnn.pytorch). 
 
