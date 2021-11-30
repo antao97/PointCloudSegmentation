@@ -49,9 +49,9 @@ For more our works on point cloud feature learning, see this [repo](https://gith
 ## Download datasets
 Download the HDF5 format datasets (where each shape is sampled 2,048 points uniformly):
 
-- ShapeNetPart (338M)&ensp;[[Dropbox]](https://www.dropbox.com/s/i54hoc0p9rvkh3n/shapenetpart_hdf5_2048.zip?dl=0)&ensp;[[BaiduDisk]](https://pan.baidu.com/s/1yi4bMVBE2mV8NqVRtNLoqw)
-- ShapeNetPart Part (450M)&ensp;[[Dropbox]](https://www.dropbox.com/s/fy6el7hc7r36e0j/shapenetpartpart_hdf5_2048.zip?dl=0)&ensp;[[BaiduDisk]](https://pan.baidu.com/s/1uCotFveZ5R5ztRPIm1hfJQ)
-- ModelNet40 (194M)&ensp;[[Dropbox]](https://www.dropbox.com/s/ea4arug1itihb8f/modelnet40_hdf5_2048.zip?dl=0)&ensp;[[BaiduDisk]](https://pan.baidu.com/s/1NQZgN8tvHVqQntxefcdVAg)
+- ShapeNetPart (338M)&ensp;[[TsinghuaCloud]](https://cloud.tsinghua.edu.cn/f/c25d94e163454196a26b/)&ensp;[[BaiduDisk]](https://pan.baidu.com/s/1yi4bMVBE2mV8NqVRtNLoqw)
+- ShapeNetPart Part (450M)&ensp;[[TsinghuaCloud]](https://cloud.tsinghua.edu.cn/f/b6ee6e3b345744889e6b/)&ensp;[[BaiduDisk]](https://pan.baidu.com/s/1uCotFveZ5R5ztRPIm1hfJQ)
+- ModelNet40 (194M)&ensp;[[TsinghuaCloud]](https://cloud.tsinghua.edu.cn/f/b3d9fe3e2a514def8097/)&ensp;[[BaiduDisk]](https://pan.baidu.com/s/1NQZgN8tvHVqQntxefcdVAg)
 
 You can find more details about the above datasets in this [repo](https://github.com/AnTao97/PointCloudDatasets).
 
@@ -105,7 +105,7 @@ You can find the Tensorboard records under `tensorboard/`.
 </p>
 
 &nbsp;
-### Results with settings for segmentation task  
+### Results with settings for segmentation task
 | Task | Info | Encoder | K | Batch Size | Epochs | ShapeNetPart | ModelNet40 | 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
 | Segmentation | Supervised | DGCNN_Seg | 40 | 32 | 250 | 98.9% | **89.4%** | 
