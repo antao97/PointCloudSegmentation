@@ -2,7 +2,7 @@
 ## Introduction
 This work aims to show whether learning a point cloud segmentation task is able to extract features performing well in classification. We do all experiments under the framework of DGCNN.
 
-Details for DGCNN see **Dynamic Graph CNN for Learning on Point Clouds** (https://arxiv.xilesou.top/pdf/1801.07829). We provide a PyTorch reimplementation for DGCNN in [AnTao97/dgcnn.pytorch](https://github.com/AnTao97/dgcnn.pytorch). 
+Details for DGCNN see **Dynamic Graph CNN for Learning on Point Clouds** (https://arxiv.xilesou.top/pdf/1801.07829). We provide a PyTorch reimplementation for DGCNN in [antao97/dgcnn.pytorch](https://github.com/antao97/dgcnn.pytorch). 
 
 DGCNN provides two type of networks, one for classification and one for segmentation. We use "DGCNN_Cls" to denote network for classification and "DGCNN_Seg" for segmentation. The network sturcture of DGCNN is
 <p float="left">
@@ -32,11 +32,10 @@ If you find this work useful, please cite:
 @article{tao2020,
       Author = {An Tao},
       Title = {Point Cloud Segmentation for Classific Feature Learning},
-      Journal = {https://github.com/AnTao97/PointCloudSegmentation},
+      Journal = {https://github.com/antao97/PointCloudSegmentation},
       Year = {2020}
 }
 ```
-For more our works on point cloud feature learning, see this [repo](https://github.com/AnTao97/PointCloudFeatureLearning).
 
 &nbsp;
 ## Requirements
@@ -53,7 +52,7 @@ Download the HDF5 format datasets (where each shape is sampled 2,048 points unif
 - ShapeNetPart Part (450M)&ensp;[[TsinghuaCloud]](https://cloud.tsinghua.edu.cn/f/b6ee6e3b345744889e6b/)&ensp;[[BaiduDisk]](https://pan.baidu.com/s/1uCotFveZ5R5ztRPIm1hfJQ)
 - ModelNet40 (194M)&ensp;[[TsinghuaCloud]](https://cloud.tsinghua.edu.cn/f/b3d9fe3e2a514def8097/)&ensp;[[BaiduDisk]](https://pan.baidu.com/s/1NQZgN8tvHVqQntxefcdVAg)
 
-You can find more details about the above datasets in this [repo](https://github.com/AnTao97/PointCloudDatasets).
+You can find more details about the above datasets in this [repo](https://github.com/antao97/PointCloudDatasets).
 
 &nbsp;
 ## Experiment settings
@@ -61,7 +60,7 @@ To evaluate the quality of extracted features, we use ShapeNetPart dataset to bo
 
 For transfer performance, we train the linear SVM classifier on ModelNet 40 dataset using the features (latent representations) obtained from the same network trained from the ShapeNetPart dataset.
 
-In this work we compare the performance for adopted training task among supervised segmentation, supervised segmentation without category label, supervised classification and unsupervised reconstruction. For supervised segmentation without category label, we discard the adding of categorical vector (mlp {64}) and directly repeat the 1024 dim feature into n x 1024. We do unsupervised reconstruction following the framework in this [repo](https://github.com/AnTao97/UnsupervisedPointCloudReconstruction) and use source points from sphere surface for decoder. We also change feature dimension into 1024. Except unsupervised reconstruction, we do all experiments under the framework of DGCNN.
+In this work we compare the performance for adopted training task among supervised segmentation, supervised segmentation without category label, supervised classification and unsupervised reconstruction. For supervised segmentation without category label, we discard the adding of categorical vector (mlp {64}) and directly repeat the 1024 dim feature into n x 1024. We do unsupervised reconstruction following the framework in this [repo](https://github.com/antao97/UnsupervisedPointCloudReconstruction) and use source points from sphere surface for decoder. We also change feature dimension into 1024. Except unsupervised reconstruction, we do all experiments under the framework of DGCNN.
 
 To train the network, run
 ```
@@ -71,7 +70,7 @@ Use `--seg_no_label` if you want to run segmentation task without category label
 
 You can download our already trained models from [[TsinghuaCloud]](https://cloud.tsinghua.edu.cn/d/d9e7a899582d432cbc11/) or [[BaiduDisk]](https://pan.baidu.com/s/1UigbY4jNts8LMZ6fqJXvxQ) and place them under `snapshot/`.
 
-Because this work is done before our PyTorch reimplementation for DGCNN, the training setting in this repo is slightly different with [AnTao97/dgcnn.pytorch](https://github.com/AnTao97/dgcnn.pytorch). You can set `self.epochs = 200` and `random_translate=False` in line 61 and 120 in `segmentation.py` to follow the settings in [AnTao97/dgcnn.pytorch](https://github.com/AnTao97/dgcnn.pytorch). 
+Because this work is done before our PyTorch reimplementation for DGCNN, the training setting in this repo is slightly different with [antao97/dgcnn.pytorch](https://github.com/antao97/dgcnn.pytorch). You can set `self.epochs = 200` and `random_translate=False` in line 61 and 120 in `segmentation.py` to follow the settings in [antao97/dgcnn.pytorch](https://github.com/antao97/dgcnn.pytorch). 
 
 Besides ShapeNetPart dataset, we also test the performace of linear SVM classifier on ShapeNetPart Part dataset, using the model trained on ShapeNetPart dataset with segmentation task. 
 
